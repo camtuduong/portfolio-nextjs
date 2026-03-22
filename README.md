@@ -8,6 +8,9 @@ First, run the development server:
 npm install
 # or
 yarn install
+
+then
+
 npm run dev
 # or
 yarn dev
