@@ -1,8 +1,7 @@
 "use client";
-
-import Navbar from "@/components/layout/Navbar";
-import About from "../About";
-import Projects from "../Projects";
+import Button from "@/components/Button";
+import Dash from "@/icons/Dash";
+import HeroBackground from "@/icons/HeroBackground";
 
 export default function HomeView() {
   return (
