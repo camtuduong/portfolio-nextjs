@@ -1,7 +1,6 @@
 "use client";
-import Button from "@/components/Button";
-import Dash from "@/icons/Dash";
-import HeroBackground from "@/icons/HeroBackground";
+import Navbar from "@/components/layout/Navbar";
+import Projects from "../Projects";
 
 export default function HomeView() {
   return (
@@ -17,7 +16,7 @@ export default function HomeView() {
       </section>
       <footer
         id="contacts"
-        className="h-[20vh] flex items-center justify-center"
+        className="flex h-[20vh] items-center justify-center"
       >
         <p>Contact information goes here</p>
       </footer>
