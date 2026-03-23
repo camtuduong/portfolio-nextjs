@@ -1,6 +1,9 @@
 {
   "about": {
-    "title": "Giới thiệu",
-    "description": "Tôi là một nhà phát triển phần mềm với niềm đam mê tạo ra các ứng dụng web hiệu quả và dễ sử dụng. Tôi có kinh nghiệm trong việc xây dựng các ứng dụng từ đầu đến cuối, sử dụng các công nghệ hiện đại như React, Node.js và MongoDB."
+    "hi": ":> hé lu",
+    "me": "Là tui đây",
+    "name": "Dương Thị Cẩm Tú",
+    "role": "FRONT-END DEVELOPER",
+    "description": "Tôi là một nhà phát triển phần mềm với niềm đam mê tạo ra các ứng dụng web hiệu quả và dễ sử dụng với Next.js, React, và TypeScript."
   }
 }

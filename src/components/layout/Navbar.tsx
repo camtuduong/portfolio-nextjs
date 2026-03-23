@@ -1,49 +1,68 @@
-import cn from "@/lib/utils/cn";
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+"use client";
+
+import EmailIcon from "@mui/icons-material/Email";
+import LinkHover from "../LinkHover";
+import ToggleButton from "../ToggleButton";
+import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
+import Face2Icon from "@mui/icons-material/Face2";
+import BackpackIcon from "@mui/icons-material/Backpack";
+import MenuIcon from "@mui/icons-material/Menu";
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-
-    onScroll();
-    window.addEventListener("scroll", onScroll);
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-    };
-  }, []);
-
   return (
-    <motion.div
-      initial={false}
-      animate={{
-        y: scrolled ? 0 : -8,
-        opacity: 1,
-      }}
-      transition={{ duration: 0.25 }}
-      className={cn(
-        "fixed top-0 left-0 z-100 w-full text-lg transition-all duration-300",
-        scrolled ? "bg-white/80 shadow-md backdrop-blur-md" : "bg-transparent",
-      )}
-    >
-      <nav className="font-comfortaa flex justify-between px-32 py-5">
-        <h1 className="font-bold">Duong Thi Cam Tu</h1>
-        <ul className="flex flex-row gap-12">
+    <div className="text-2xl">
+      <nav className="font-comfortaa flex items-center justify-between">
+        <a href="#" className="mr-20">
+          Tus
+        </a>
+        <div className="flex w-full items-center gap-5">
+          <LinkHover
+            content="cmtduong144@gmail.com"
+            href="mailto:cmtduong144@gmail.com"
+            icon={<EmailIcon className="mr-1" />}
+          />
+          <ToggleButton />
+        </div>
+
+        {/* Desktop */}
+        <ul className="hidden flex-row gap-5 lg:flex">
           <li>
-            <a href="#about">About</a>
+            <LinkHover
+              content="Work"
+              href="work"
+              icon={<InsertDriveFileIcon className="mr-1" />}
+            />
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <LinkHover
+              content="Resume"
+              href="resume"
+              icon={<Face2Icon className="mr-1" />}
+            />
           </li>
           <li>
-            <a href="#contacts">Contacts</a>
+            <LinkHover
+              content="Shelf"
+              href="shelf"
+              icon={<BackpackIcon className="mr-1" />}
+            />
           </li>
         </ul>
+
+        {/* Mobile */}
+        <div className="cursor-pointer lg:hidden">
+          <MenuIcon
+            sx={{
+              ":hover": {
+                cursor: "pointer",
+                color: "#004aad",
+              },
+            }}
+          />
+        </div>
+
+        {/* Mobile Menu */}
       </nav>
-    </motion.div>
+    </div>
   );
 }

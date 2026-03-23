@@ -26,7 +26,7 @@ export default async function RootLayout({
     <html lang={locale} suppressHydrationWarning>
       <head />
       <body>
-        <ThemeProvider defaultTheme={THEME.LIGHT} attribute="class">
+        <ThemeProvider defaultTheme={THEME.LIGHT}>
           <NextIntlClientProvider>
             <AnimationRouteChange>
               <SmoothScroll>{children}</SmoothScroll>
