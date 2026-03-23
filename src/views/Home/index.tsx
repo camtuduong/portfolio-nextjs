@@ -1,13 +1,19 @@
 "use client";
 import Navbar from "@/components/layout/Navbar";
 import Projects from "../Projects";
+import About from "../About";
 
 export default function HomeView() {
   return (
     <>
-      <header className="relative h-screen w-full">
+      <header className="h-screen w-full flex-col">
         <Navbar />
-        <div id="about">{/* <About /> */}</div>
+        {/* <div className="-z-1">
+        <HeroBackground />
+      </div> */}
+        <div id="about" className="mt-28">
+          <About />
+        </div>
       </header>
       <section>
         <div id="projects" className="flex justify-center">
