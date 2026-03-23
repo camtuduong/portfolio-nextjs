@@ -1,6 +1,9 @@
 {
   "about": {
-    "title": "About",
-    "description": "I am a software developer with a passion for creating efficient and user-friendly web applications. I have experience in building end-to-end applications using modern technologies such as React, Node.js, and MongoDB."
+    "hi": ":> hi",
+    "me": "It's me",
+    "name": "Duong Thi Cam Tu",
+    "role": "FRONT-END DEVELOPER",
+    "description": "I am a software developer with a passion for creating efficient and user-friendly web applications with Next.js, React, and TypeScript"
   }
 }

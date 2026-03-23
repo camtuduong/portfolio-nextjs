@@ -11,7 +11,7 @@ export default function Button({
   return (
     <button
       className={cn(
-        "bg-primary py-2 px-6 rounded-lg cursor-pointer",
+        "bg-primary cursor-pointer rounded-lg px-6 py-2",
         className,
       )}
     >
