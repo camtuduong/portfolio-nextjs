@@ -1,25 +1,27 @@
 import Button from "@/components/Button";
-import React from "react";
+import { useTranslations } from "next-intl";
 
 export default function About() {
+  const t = useTranslations("about");
+
   return (
     <div>
-      <div className="absolute pl-32 top-10 w-[750px] h-[500px] flex flex-col gap-2">
-        <div className="text-primary text-xl font-bold font-nunito">
-          FRONT-END DEVELOPER
+      <div className="flex h-[500px] w-[750px] flex-col gap-2 pl-32">
+        <div className="text-primary font-nunito text-xl font-bold">
+          {t("title")}
         </div>
         <div className="flex flex-col gap-8">
-          <h1 className="font-bold leading-[120%] text-6xl font-playfair">
+          <h1 className="font-playfair text-6xl leading-[120%] font-bold">
             Hello, my name is Duong Thi Cam Tu <br />
             you can call me Tus
           </h1>
-          <div className="text-2xl leading-[150%] font-nunito text-secondary">
+          <div className="font-nunito text-secondary text-2xl leading-[150%]">
             Short text with details about you, what you do or your professional
             career. You can add more information on the about page.
           </div>
-          <div className="flex text-lg gap-3 font-roboto">
+          <div className="font-roboto flex gap-3 text-lg">
             <Button>Projects</Button>
-            <Button className="bg-white border">LinkedIn</Button>
+            <Button className="border bg-white">LinkedIn</Button>
             <Button>GitHub</Button>
           </div>
         </div>
