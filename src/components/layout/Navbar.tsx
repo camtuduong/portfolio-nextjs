@@ -7,8 +7,10 @@ import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 import Face2Icon from "@mui/icons-material/Face2";
 import BackpackIcon from "@mui/icons-material/Backpack";
 import MenuIcon from "@mui/icons-material/Menu";
+import { useTranslations } from "next-intl";
 
 export default function Navbar() {
+  const t = useTranslations("navbar");
   return (
     <div className="text-2xl">
       <nav className="font-comfortaa flex items-center justify-between">
@@ -23,32 +25,30 @@ export default function Navbar() {
           />
           <ToggleButton />
         </div>
-
         {/* Desktop */}
         <ul className="hidden flex-row gap-5 lg:flex">
           <li>
             <LinkHover
-              content="Work"
+              content={t("work")}
               href="work"
               icon={<InsertDriveFileIcon className="mr-1" />}
             />
           </li>
           <li>
             <LinkHover
-              content="Resume"
+              content={t("resume")}
               href="resume"
               icon={<Face2Icon className="mr-1" />}
             />
           </li>
           <li>
             <LinkHover
-              content="Shelf"
+              content={t("shelf")}
               href="shelf"
               icon={<BackpackIcon className="mr-1" />}
             />
           </li>
         </ul>
-
         {/* Mobile */}
         <div className="cursor-pointer lg:hidden">
           <MenuIcon

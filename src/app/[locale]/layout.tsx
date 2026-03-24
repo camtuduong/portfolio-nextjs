@@ -6,7 +6,13 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { ThemeProvider } from "next-themes";
 import { notFound } from "next/dist/client/components/navigation";
+import { Figtree } from "next/font/google";
 import "../globals.css";
+
+const figtree = Figtree({
+  subsets: ["latin"],
+  variable: "--font-display",
+});
 
 export default async function RootLayout({
   children,
@@ -23,7 +29,7 @@ export default async function RootLayout({
 
   setRequestLocale(locale);
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning className={figtree.variable}>
       <head />
       <body>
         <ThemeProvider defaultTheme={THEME.LIGHT}>
