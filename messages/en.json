@@ -1,4 +1,9 @@
 {
+  "navbar": {
+    "work": "Work",
+    "resume": "Resume",
+    "shelf": "Shelf"
+  },
   "about": {
     "hi": ":> hi",
     "me": "It's me",

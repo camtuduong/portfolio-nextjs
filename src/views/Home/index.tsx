@@ -2,6 +2,7 @@
 
 import MediaSocialList from "@/components/layout/MediaSocialList";
 import Navbar from "@/components/layout/Navbar";
+import TargetCursor from "@/components/layout/TargetCursor";
 
 import TextType from "@/components/layout/TextType";
 import ToolKit from "@/icons/ToolKit";
@@ -26,12 +27,6 @@ export default function HomeView() {
       <div className="relative container mx-auto h-screen w-full rounded-xl bg-white p-8 shadow-2xl shadow-black/50 dark:bg-green-300">
         <header className="w-full flex-col">
           <Navbar />
-          {/* <div className="-z-1">
-            <HeroBackground />
-          </div>
-          <div id="about" className="mt-28">
-            <About />
-          </div> */}
         </header>
 
         {/* Media Social */}
@@ -62,7 +57,7 @@ export default function HomeView() {
             {/* HELLO */}
             <div className="ml-20 font-bold">
               <TextType
-                className="text-6xl"
+                className="cursor-target text-6xl"
                 typingSpeed={75}
                 pauseDuration={1500}
                 showCursor
@@ -75,12 +70,26 @@ export default function HomeView() {
             </div>
 
             {/* ROLE */}
-            <div className="mt-6 ml-20">
-              <h1 className="text-2xl font-bold">{t("role")}</h1>
-              <p className="mt-8 pr-24 text-lg">{t("description")}</p>
+            <div className="i mt-6 ml-20">
+              <h1 className="cursor-target inline-block text-2xl font-bold">
+                {t("role")}
+              </h1>
+              <p className="cursor-target mt-8 inline-block w-[calc(100%-96px)] text-lg">
+                {t("description")}
+              </p>
             </div>
           </div>
+          <div>
+            <TargetCursor
+              spinDuration={4.3}
+              hideDefaultCursor
+              parallaxOn={false}
+              hoverDuration={0.75}
+            />
 
+            {/* CONTACT */}
+            <div className="absolute left-52 mt-7"></div>
+          </div>
           {/* IMAGE */}
           <div className="absolute top-24 right-24">
             <Image
@@ -92,12 +101,6 @@ export default function HomeView() {
             />
           </div>
         </section>
-        {/* <footer
-          id="contacts"
-          className="flex h-[20vh] items-center justify-center"
-        >
-          <p>Contact information goes here</p>
-        </footer> */}
       </div>
     </div>
   );

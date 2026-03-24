@@ -1,4 +1,9 @@
 {
+  "navbar": {
+    "work": "Công việc",
+    "resume": "Hồ sơ",
+    "shelf": "Kệ sách"
+  },
   "about": {
     "hi": ":> hé lu",
     "me": "Là tui đây",

@@ -5,6 +5,8 @@ import React from "react";
 import { useTheme } from "next-themes";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import BedtimeIcon from "@mui/icons-material/Bedtime";
+import { motion } from "framer-motion";
+
 export default function ToggleButton() {
   const { theme, setTheme } = useTheme();
   const isDark = theme === THEME.DARK;
@@ -23,14 +25,22 @@ export default function ToggleButton() {
           }}
         />
       ) : (
-        <WbSunnyIcon
-          sx={{
-            ":hover": {
-              color: "#FFDE42",
-              transition: "color 0.2s ease",
-            },
+        <motion.div
+          whileHover={{
+            rotate: 30,
+            // scale: 1.2,
           }}
-        />
+          whileTap={{ scale: 0.7 }}
+        >
+          <WbSunnyIcon
+            sx={{
+              ":hover": {
+                color: "#eb952e",
+                transition: "color 0.2s ease",
+              },
+            }}
+          />
+        </motion.div>
       )}
     </button>
   );
