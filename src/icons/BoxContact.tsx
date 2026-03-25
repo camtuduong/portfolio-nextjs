@@ -11,7 +11,7 @@ export default function BoxContact(props: React.SVGProps<SVGSVGElement>) {
       y="0px"
       width="100%"
       viewBox="0 0 464 240"
-      enable-background="new 0 0 464 240"
+      enableBackground="new 0 0 464 240"
       xmlSpace="preserve"
       {...props}
     >

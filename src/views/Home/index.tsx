@@ -6,13 +6,16 @@ import Navbar from "@/components/layout/Navbar";
 import TargetCursor from "@/components/layout/TargetCursor";
 
 import TextType from "@/components/layout/TextType";
+import Title from "@/components/Title";
 import BoxContact from "@/icons/BoxContact";
-import Heart from "@/icons/Heart";
+import Flower from "@/icons/Flower";
 import ToolKit from "@/icons/ToolKit";
 import { AnimatePresence, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import About from "../About";
+import Stack from "../Stack";
 
 export default function HomeView() {
   const t = useTranslations("about");
@@ -50,6 +53,7 @@ export default function HomeView() {
 
       {/* Media Social */}
       <MediaSocialList />
+
       {showToolkit && (
         <AnimatePresence>
           <motion.div
@@ -70,9 +74,10 @@ export default function HomeView() {
           </motion.div>
         </AnimatePresence>
       )}
-      <section className="mt-40 flex flex-col">
-        {/* ABOUT */}
-        <div className="ml-20 w-[45%]">
+
+      {/* ABOUT */}
+      <section className="mt-40 ml-20 flex flex-col pb-[250px]">
+        <div className="w-[45%]">
           {/* HELLO */}
           <div className="ml-20 font-bold">
             <TextType
@@ -89,7 +94,7 @@ export default function HomeView() {
           </div>
 
           {/* QUICK INFO */}
-          {showQuickInfo && (
+          {showQuickInfo ? (
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -103,6 +108,8 @@ export default function HomeView() {
                 {t("description")}
               </p>
             </motion.div>
+          ) : (
+            <div className="h-[148px]" />
           )}
         </div>
         <div>
@@ -118,7 +125,7 @@ export default function HomeView() {
             {!videoEnded && videoStarted && (
               <motion.div
                 key="video"
-                className="absolute ml-40"
+                className="absolute ml-20"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -138,47 +145,32 @@ export default function HomeView() {
             )}
           </AnimatePresence>
           {videoEnded && (
-            <>
-              <motion.a
-                key="contact"
-                href="mailto:cmtduong144@gmail.com"
-                className="absolute left-[262px] z-10 mt-12 cursor-pointer"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                whileHover={{ scale: 1.05 }}
+            <motion.a
+              key="contact"
+              href="mailto:cmtduong144@gmail.com"
+              className="absolute left-[262px] z-10 mt-12 cursor-pointer"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <BoxContact className="h-[190px] w-48" />
+              <motion.div
+                className="absolute top-[105px] left-[71px]"
+                initial={{ opacity: 0, scale: 0.8, rotate: 0 }}
+                animate={{
+                  opacity: 1,
+                  scale: [0.8, 1.4, 0.9, 1.2, 1],
+                }}
+                transition={{
+                  opacity: { duration: 0.2 },
+                  scale: { duration: 0.5, times: [0, 0.35, 0.6, 0.8, 1] },
+                  rotate: { duration: 0.5, times: [0, 0.35, 0.6, 0.8, 1] },
+                }}
               >
-                <BoxContact className="h-[190px] w-48" />
-                <motion.div
-                  className="absolute top-[105px] left-[71px]"
-                  initial={{ opacity: 0, scale: 0.8, rotate: 0 }}
-                  animate={{
-                    opacity: 1,
-                    scale: [0.8, 1.4, 0.9, 1.2, 1],
-                  }}
-                  transition={{
-                    opacity: { duration: 0.2 },
-                    scale: { duration: 0.5, times: [0, 0.35, 0.6, 0.8, 1] },
-                    rotate: { duration: 0.5, times: [0, 0.35, 0.6, 0.8, 1] },
-                  }}
-                >
-                  {/* <Heart className="h-12 w-12" /> */}
-                  <p className="text-xl font-bold">Start</p>
-                </motion.div>
-              </motion.a>
-              {/* <div className="mt-36 ml-[400px]">
-                <TextType
-                  className="cursor-target text-3xl"
-                  typingSpeed={75}
-                  pauseDuration={1500}
-                  showCursor={false}
-                  cursorCharacter="|"
-                  texts={["", "Contact me"]}
-                  deletingSpeed={50}
-                  cursorBlinkDuration={0.5}
-                  loop={false}
-                />
-              </div> */}
-            </>
+                {/* <Heart className="h-12 w-12" /> */}
+                <p className="text-xl font-bold">Start</p>
+              </motion.div>
+            </motion.a>
           )}
         </div>
         {/* IMAGE */}
@@ -191,6 +183,12 @@ export default function HomeView() {
             className="h-[500px] w-[500px] object-fill lg:h-[650px] lg:w-[650px]"
           />
         </div>
+      </section>
+
+      {/* My Stack */}
+      <Stack />
+      <section className="mt-20">
+        <About />
       </section>
     </LayoutBackground>
   );

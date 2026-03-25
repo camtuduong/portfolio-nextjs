@@ -7,9 +7,6 @@ export default function About() {
   return (
     <div>
       <div className="flex h-[500px] w-[750px] flex-col gap-2 pl-32">
-        <div className="text-primary font-nunito text-xl font-bold">
-          {t("title")}
-        </div>
         <div className="flex flex-col gap-8">
           <h1 className="font-playfair text-6xl leading-[120%] font-bold">
             Hello, my name is Duong Thi Cam Tu <br />
