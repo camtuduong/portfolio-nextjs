@@ -10,5 +10,13 @@
     "name": "Duong Thi Cam Tu",
     "role": "FRONT-END DEVELOPER",
     "description": "I am a software developer with a passion for creating efficient and user-friendly web applications with Next.js, React, and TypeScript"
+  },
+  "stack": {
+    "nameRole": {
+      "fe": "FRONTEND",
+      "be": "BACKEND",
+      "db": "DATABASE",
+      "tools": "TOOLS"
+    }
   }
 }
