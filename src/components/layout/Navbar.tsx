@@ -8,15 +8,22 @@ import Face2Icon from "@mui/icons-material/Face2";
 import BackpackIcon from "@mui/icons-material/Backpack";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useTranslations } from "next-intl";
+import { useSecret } from "@/context/SecretContext";
 
 export default function Navbar() {
   const t = useTranslations("navbar");
+  const { setClicked } = useSecret();
   return (
     <div className="text-2xl">
       <nav className="font-comfortaa flex items-center justify-between">
-        <a href="#" className="mr-20">
+        <button
+          className="mr-20"
+          onClick={() => {
+            setClicked(true);
+          }}
+        >
           Tus
-        </a>
+        </button>
         <div className="flex w-full items-center gap-5">
           <LinkHover
             content="cmtduong144@gmail.com"

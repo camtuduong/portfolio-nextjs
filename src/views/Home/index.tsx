@@ -6,6 +6,8 @@ import Navbar from "@/components/layout/Navbar";
 import TargetCursor from "@/components/layout/TargetCursor";
 
 import TextType from "@/components/layout/TextType";
+import BoxContact from "@/icons/BoxContact";
+import Heart from "@/icons/Heart";
 import ToolKit from "@/icons/ToolKit";
 import { AnimatePresence, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
@@ -16,7 +18,8 @@ export default function HomeView() {
   const t = useTranslations("about");
   const [showToolkit, setShowToolkit] = useState(false);
   const [showQuickInfo, setShowQuickInfo] = useState(false);
-  const [showContact, setShowContact] = useState(false);
+  const [videoStarted, setVideoStarted] = useState(false);
+  const [videoEnded, setVideoEnded] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -34,7 +37,7 @@ export default function HomeView() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShowContact(true);
+      setVideoStarted(true);
     }, 6000);
     return () => clearTimeout(timer);
   }, []);
@@ -111,9 +114,15 @@ export default function HomeView() {
           />
 
           {/* CONTACT */}
-          {showContact && (
-            <motion.div>
-              <div className="absolute ml-40">
+          <AnimatePresence mode="wait">
+            {!videoEnded && videoStarted && (
+              <motion.div
+                key="video"
+                className="absolute ml-40"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
                 <video
                   width={500}
                   height={400}
@@ -121,11 +130,55 @@ export default function HomeView() {
                   muted
                   playsInline
                   preload="auto"
+                  onEnded={() => setVideoEnded(true)}
                 >
                   <source src="/pull.webm" type="video/webm" />
                 </video>
-              </div>
-            </motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+          {videoEnded && (
+            <>
+              <motion.a
+                key="contact"
+                href="mailto:cmtduong144@gmail.com"
+                className="absolute left-[262px] z-10 mt-12 cursor-pointer"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <BoxContact className="h-[190px] w-48" />
+                <motion.div
+                  className="absolute top-[105px] left-[71px]"
+                  initial={{ opacity: 0, scale: 0.8, rotate: 0 }}
+                  animate={{
+                    opacity: 1,
+                    scale: [0.8, 1.4, 0.9, 1.2, 1],
+                  }}
+                  transition={{
+                    opacity: { duration: 0.2 },
+                    scale: { duration: 0.5, times: [0, 0.35, 0.6, 0.8, 1] },
+                    rotate: { duration: 0.5, times: [0, 0.35, 0.6, 0.8, 1] },
+                  }}
+                >
+                  {/* <Heart className="h-12 w-12" /> */}
+                  <p className="text-xl font-bold">Start</p>
+                </motion.div>
+              </motion.a>
+              {/* <div className="mt-36 ml-[400px]">
+                <TextType
+                  className="cursor-target text-3xl"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  cursorCharacter="|"
+                  texts={["", "Contact me"]}
+                  deletingSpeed={50}
+                  cursorBlinkDuration={0.5}
+                  loop={false}
+                />
+              </div> */}
+            </>
           )}
         </div>
         {/* IMAGE */}
