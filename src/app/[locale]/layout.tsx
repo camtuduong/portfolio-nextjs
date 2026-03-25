@@ -8,6 +8,7 @@ import { ThemeProvider } from "next-themes";
 import { notFound } from "next/dist/client/components/navigation";
 import { Figtree } from "next/font/google";
 import "../globals.css";
+import { SecretProvider } from "@/context/SecretContext";
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -35,7 +36,9 @@ export default async function RootLayout({
         <ThemeProvider defaultTheme={THEME.LIGHT}>
           <NextIntlClientProvider>
             <AnimationRouteChange>
-              <SmoothScroll>{children}</SmoothScroll>
+              <SmoothScroll>
+                <SecretProvider>{children}</SecretProvider>
+              </SmoothScroll>
             </AnimationRouteChange>
           </NextIntlClientProvider>
         </ThemeProvider>
