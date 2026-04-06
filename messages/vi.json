@@ -10,5 +10,13 @@
     "name": "Dương Thị Cẩm Tú",
     "role": "FRONT-END DEVELOPER",
     "description": "Tôi là một nhà phát triển phần mềm với niềm đam mê tạo ra các ứng dụng web hiệu quả và dễ sử dụng với Next.js, React, và TypeScript."
+  },
+  "stack": {
+    "nameRole": {
+      "fe": "FRONTEND",
+      "be": "BACKEND",
+      "db": "DATABASE",
+      "tools": "TOOLS"
+    }
   }
 }
