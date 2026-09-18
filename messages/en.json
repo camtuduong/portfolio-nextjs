@@ -59,6 +59,7 @@
       "database": "Database",
       "tools": "Tools"
     },
+    "subtitle": "Technologies and tools I use to design, build, and maintain modern web applications.",
     "nameRole": {
       "fe": "FRONTEND",
       "be": "BACKEND",

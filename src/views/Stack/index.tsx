@@ -1,10 +1,9 @@
 "use client";
 
-import Title from "@/components/Title";
-import Flower from "@/icons/Flower";
 import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import Dash from "@/icons/Dash";
 
 export type StackCategory = "frontend" | "backend" | "database" | "tools";
 
@@ -66,15 +65,18 @@ export default function Stack() {
     <section
       id="stack"
       aria-label={t("title")}
-      className="mt-20 flex flex-col px-4 sm:px-8 md:px-16 lg:ml-40"
+      className="mt-20 flex flex-col px-4 sm:px-8 md:px-16"
     >
-      <div className="mb-10">
-        <Title title={t("title")} icon={<Flower className="h-8 w-8" />} />
+      <header className="flex flex-col items-center gap-2 text-center">
+        <h2 className="font-playfair text-4xl leading-tight font-bold tracking-tight sm:text-5xl">
+          {t("title")}
+        </h2>
+        <Dash className="mt-1" />
         <p className="mt-3 max-w-2xl text-base text-neutral-600 sm:text-lg dark:text-neutral-300">
-          {t("description")}
+          {t("subtitle")}
         </p>
-      </div>
-      <div className="space-y-12">
+      </header>
+      <div className="mt-10 space-y-12">
         {STACK_CATEGORIES.map((role) => (
           <div key={role} className="grid gap-4 sm:grid-cols-12">
             {/* Role title */}

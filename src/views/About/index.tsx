@@ -28,7 +28,7 @@ export default function About() {
         id="about"
         aria-label={t("role")}
         // Extra left padding clears the fixed social icon dock (see MediaSocialList)
-        className="flex flex-col items-center gap-10 py-8 pr-4 pl-14 sm:pr-6 sm:pl-16 md:flex-row md:items-center md:justify-between md:gap-8 md:py-12 md:pr-8 md:pl-14 lg:px-16 lg:py-16"
+        className="mr-4 ml-8 flex flex-col items-center gap-8 py-8 pr-4 pl-14 sm:pr-6 sm:pl-16 md:flex-row md:items-center md:justify-between md:gap-4 md:py-12 md:pr-8 md:pl-14 lg:px-16 lg:py-16"
       >
         <div className="z-10 w-full md:w-3/5 lg:w-1/2">
           {/* Hello and name */}
@@ -91,7 +91,7 @@ export default function About() {
             duration: shouldReduceMotion ? 0 : 0.6,
             delay: shouldReduceMotion ? 0 : 0.2,
           }}
-          className="z-0 w-44 shrink-0 sm:w-56 lg:w-72 xl:w-80"
+          className="z-0 w-44 shrink-0 sm:w-72 md:w-72 lg:w-72 xl:w-80"
         >
           <Image
             width={1202}

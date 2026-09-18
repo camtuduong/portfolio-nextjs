@@ -59,6 +59,7 @@
       "database": "Cơ Sở Dữ Liệu",
       "tools": "Công Cụ"
     },
+    "subtitle": "Các công nghệ và công cụ tôi sử dụng để thiết kế, xây dựng và vận hành các ứng dụng web hiện đại.",
     "nameRole": {
       "fe": "FRONTEND",
       "be": "BACKEND",
