@@ -5,14 +5,21 @@ export default function LinkHover({
   content,
   href,
   icon,
+  external,
+  ariaLabel,
 }: {
   icon?: React.ReactNode;
   content: string;
   href: string;
+  external?: boolean;
+  ariaLabel?: string;
 }) {
   return (
     <motion.a
       href={href}
+      aria-label={ariaLabel}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noopener noreferrer" : undefined}
       className="inline-block px-2 py-1 whitespace-nowrap"
       whileHover={{
         rotate: -8,

@@ -2,16 +2,63 @@
   "navbar": {
     "work": "Work",
     "resume": "Resume",
+    "resumeAria": "View resume PDF (opens in new tab)",
     "shelf": "Shelf"
+  },
+  "localeSwitcher": {
+    "label": "Select language",
+    "en": "English",
+    "vi": "Vietnamese"
+  },
+  "theme": {
+    "switchToLight": "Switch to light theme",
+    "switchToDark": "Switch to dark theme"
+  },
+  "social": {
+    "linkedinAria": "Open LinkedIn profile in a new tab",
+    "githubAria": "Open GitHub profile in a new tab"
   },
   "about": {
     "hi": ":> hi",
     "me": "It's me",
     "name": "Duong Thi Cam Tu",
-    "role": "FRONT-END DEVELOPER",
-    "description": "I am a software developer with a passion for creating efficient and user-friendly web applications with Next.js, React, and TypeScript"
+    "role": "FULLSTACK DEVELOPER (FRONTEND FOCUSED)",
+    "description": "I'm a fullstack developer with a frontend focus, building clean, responsive, and pixel-perfect web interfaces with Next.js, React, and TypeScript, backed by Node.js, Express, and database integration",
+    "profileAlt": "Portrait of Duong Thi Cam Tu",
+    "startContact": "Start",
+    "contactBoxAria": "Send email to Duong Thi Cam Tu",
+    "viewProjects": "View projects",
+    "viewProjectsAria": "Jump to featured projects section",
+    "contactMe": "Contact me",
+    "contactMeAria": "Send an email to cmtduong144@gmail.com"
+  },
+  "capabilities": {
+    "title": "Capabilities",
+    "subtitle": "Core strengths and engineering practices grounded in modern web technologies and practical project delivery.",
+    "cards": {
+      "frontend": {
+        "title": "Responsive Frontend UI",
+        "description": "Building interactive, accessible, and responsive user interfaces with Next.js, React, Tailwind CSS, and Framer Motion."
+      },
+      "fullstack": {
+        "title": "Full-Stack Development",
+        "description": "Developing end-to-end web applications connecting React frontends with Node.js, Express, and MongoDB or relational databases."
+      },
+      "maintainability": {
+        "title": "Maintainable Delivery",
+        "description": "Writing type-safe code with TypeScript, managing source control with Git, and collaborating through structured project tools like Jira."
+      }
+    }
   },
   "stack": {
+    "title": "My Stack",
+    "description": "Technologies and tools I use to design, build, and maintain modern web applications.",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Database",
+      "tools": "Tools"
+    },
     "nameRole": {
       "fe": "FRONTEND",
       "be": "BACKEND",
@@ -51,5 +98,16 @@
     "viewSource": "View on GitHub",
     "viewSourceAria": "View {title} source code on GitHub (opens in new tab)",
     "noProjects": "No projects found for the selected category."
+  },
+  "contact": {
+    "eyebrow": "Get In Touch",
+    "title": "Let's Connect",
+    "description": "Have a project in mind or looking for a developer to collaborate with? Feel free to reach out via email.",
+    "cta": "Send an email",
+    "ctaAria": "Send an email to cmtduong144@gmail.com (opens default mail client)"
+  },
+  "metadata": {
+    "title": "Duong Thi Cam Tu | Front-end Developer",
+    "description": "Software developer creating efficient and user-friendly web applications with Next.js, React, and TypeScript."
   }
 }

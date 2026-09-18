@@ -28,11 +28,11 @@ export default function LayoutBackground({
   }, [isClick]);
 
   return (
-    <div className={cn("bg-background dark:bg-background w-full pt-16")}>
+    <div className={cn("bg-background w-full pt-16")}>
       {isClick && <Confetti width={newWidth} height={height} recycle={false} />}
       <div
         className={cn(
-          "relative container mx-auto w-full rounded-xl bg-white p-8 shadow-2xl shadow-black/50 dark:bg-green-300",
+          "relative container mx-auto w-full rounded-xl bg-white p-8 shadow-2xl shadow-black/50 dark:bg-neutral-900 dark:shadow-black/70",
         )}
       >
         {children}

@@ -2,16 +2,63 @@
   "navbar": {
     "work": "Công việc",
     "resume": "Hồ sơ",
+    "resumeAria": "Xem hồ sơ PDF (mở tab mới)",
     "shelf": "Kệ sách"
+  },
+  "localeSwitcher": {
+    "label": "Chọn ngôn ngữ",
+    "en": "Tiếng Anh",
+    "vi": "Tiếng Việt"
+  },
+  "theme": {
+    "switchToLight": "Chuyển sang giao diện sáng",
+    "switchToDark": "Chuyển sang giao diện tối"
+  },
+  "social": {
+    "linkedinAria": "Mở hồ sơ LinkedIn trong tab mới",
+    "githubAria": "Mở hồ sơ GitHub trong tab mới"
   },
   "about": {
     "hi": ":> hé lu",
     "me": "Là tui đây",
     "name": "Dương Thị Cẩm Tú",
-    "role": "FRONT-END DEVELOPER",
-    "description": "Tôi là một nhà phát triển phần mềm với niềm đam mê tạo ra các ứng dụng web hiệu quả và dễ sử dụng với Next.js, React, và TypeScript."
+    "role": "FULLSTACK DEVELOPER (FRONTEND FOCUSED)",
+    "description": "Tôi là lập trình viên fullstack thiên về frontend, xây dựng giao diện web gọn gàng, responsive và chuẩn từng pixel bằng Next.js, React và TypeScript, kết hợp Node.js, Express và tích hợp cơ sở dữ liệu.",
+    "profileAlt": "Ảnh chân dung Dương Thị Cẩm Tú",
+    "startContact": "Bắt đầu",
+    "contactBoxAria": "Gửi email cho Dương Thị Cẩm Tú",
+    "viewProjects": "Xem dự án",
+    "viewProjectsAria": "Chuyển tới phần dự án nổi bật",
+    "contactMe": "Liên hệ tôi",
+    "contactMeAria": "Gửi email tới cmtduong144@gmail.com"
+  },
+  "capabilities": {
+    "title": "Năng Lực Chuyên Môn",
+    "subtitle": "Thế mạnh cốt lõi và phương pháp kỹ thuật dựa trên các công nghệ web hiện đại và thực tiễn phát triển dự án.",
+    "cards": {
+      "frontend": {
+        "title": "Giao Diện Frontend Thích Ứng",
+        "description": "Xây dựng giao diện người dùng tương tác, dễ tiếp cận và tương thích đa thiết bị với Next.js, React, Tailwind CSS và Framer Motion."
+      },
+      "fullstack": {
+        "title": "Phát Triển Full-Stack",
+        "description": "Phát triển ứng dụng web toàn diện kết nối giao diện React với hệ thống backend Node.js, Express và cơ sở dữ liệu MongoDB hoặc SQL."
+      },
+      "maintainability": {
+        "title": "Quy Trình & Khả Năng Duy Trì",
+        "description": "Viết mã nguồn an toàn kiểu dữ liệu với TypeScript, quản lý phiên bản cùng Git và phối hợp qua các công cụ dự án như Jira."
+      }
+    }
   },
   "stack": {
+    "title": "Công Nghệ Sử Dụng",
+    "description": "Các công nghệ và công cụ tôi sử dụng để thiết kế, xây dựng và vận hành các ứng dụng web hiện đại.",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Cơ Sở Dữ Liệu",
+      "tools": "Công Cụ"
+    },
     "nameRole": {
       "fe": "FRONTEND",
       "be": "BACKEND",
@@ -51,5 +98,16 @@
     "viewSource": "Xem trên GitHub",
     "viewSourceAria": "Xem mã nguồn {title} trên GitHub (mở trong tab mới)",
     "noProjects": "Không tìm thấy dự án nào trong danh mục đã chọn."
+  },
+  "contact": {
+    "eyebrow": "Liên Hệ",
+    "title": "Kết Nối Cùng Tôi",
+    "description": "Bạn có ý tưởng dự án hoặc đang tìm kiếm lập trình viên để hợp tác? Hãy gửi email cho tôi.",
+    "cta": "Gửi email",
+    "ctaAria": "Gửi email tới cmtduong144@gmail.com (mở ứng dụng email mặc định)"
+  },
+  "metadata": {
+    "title": "Dương Thị Cẩm Tú | Lập trình viên Front-end",
+    "description": "Nhà phát triển phần mềm xây dựng các ứng dụng web tối ưu và thân thiện với người dùng cùng Next.js, React và TypeScript."
   }
 }

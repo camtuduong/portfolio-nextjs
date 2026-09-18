@@ -16,6 +16,7 @@ export interface ProjectMetadata {
   readonly descriptionKey: string;
   readonly technologies: readonly string[];
   readonly githubUrl?: string;
+  readonly websiteUrl?: string;
   readonly accentGradient: string;
 }
 
@@ -25,8 +26,14 @@ export const PROJECTS_DATA: readonly ProjectMetadata[] = [
     category: "frontend",
     titleKey: "items.portfolio.title",
     descriptionKey: "items.portfolio.description",
-    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    githubUrl: "https://github.com/camtuduong/portfolio-nextjs",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+    ],
+    websiteUrl: "https://camtuduong.vercel.app/",
     accentGradient: "from-blue-500/25 via-sky-500/15 to-transparent",
   },
   {
@@ -36,32 +43,16 @@ export const PROJECTS_DATA: readonly ProjectMetadata[] = [
     descriptionKey: "items.fastChat.description",
     technologies: ["React", "Node.js", "Express.js", "MongoDB", "Socket.IO"],
     accentGradient: "from-teal-500/25 via-emerald-500/15 to-transparent",
-  },
-  {
-    id: "learn-web-dev",
-    category: "fullstack",
-    titleKey: "items.learnWebDev.title",
-    descriptionKey: "items.learnWebDev.description",
-    technologies: ["JavaScript", "TypeScript", "Node.js", "MongoDB"],
-    githubUrl: "https://github.com/camtuduong/learn-web-dev",
-    accentGradient: "from-purple-500/25 via-pink-500/15 to-transparent",
-  },
-  {
-    id: "motion-ui-components",
-    category: "tools",
-    titleKey: "items.motionUiComponents.title",
-    descriptionKey: "items.motionUiComponents.description",
-    technologies: ["React", "TypeScript", "Framer Motion", "Tailwind CSS"],
-    githubUrl: "https://github.com/camtuduong/portfolio-nextjs",
-    accentGradient: "from-amber-500/25 via-orange-500/15 to-transparent",
+    websiteUrl: "https://chatcungthorr.vercel.app/",
   },
 ] as const;
 
-export const CATEGORIES: readonly { id: ProjectCategory; labelKey: string }[] = [
-  { id: "frontend", labelKey: "categories.frontend" },
-  { id: "fullstack", labelKey: "categories.fullstack" },
-  { id: "tools", labelKey: "categories.tools" },
-] as const;
+export const CATEGORIES: readonly { id: ProjectCategory; labelKey: string }[] =
+  [
+    { id: "frontend", labelKey: "categories.frontend" },
+    { id: "fullstack", labelKey: "categories.fullstack" },
+    { id: "tools", labelKey: "categories.tools" },
+  ] as const;
 
 type FilterOption = "all" | ProjectCategory;
 
@@ -95,15 +86,15 @@ export default function Projects() {
     <section
       id="projects"
       aria-label={t("title")}
-      className="mt-28 mb-16 w-full flex flex-col items-center px-4 sm:px-6 lg:px-8"
+      className="mt-28 mb-16 flex w-full flex-col items-center px-4 sm:px-6 lg:px-8"
     >
       {/* Section Header */}
       <header className="flex flex-col items-center gap-2 text-center">
-        <h2 className="text-4xl sm:text-5xl font-bold leading-tight font-playfair tracking-tight">
+        <h2 className="font-playfair text-4xl leading-tight font-bold tracking-tight sm:text-5xl">
           {t("title")}
         </h2>
         <Dash className="mt-1" />
-        <p className="mt-3 max-w-2xl text-base text-neutral-600 dark:text-neutral-300 sm:text-lg">
+        <p className="mt-3 max-w-2xl text-base text-neutral-600 sm:text-lg dark:text-neutral-300">
           {t("subtitle")}
         </p>
       </header>
@@ -112,12 +103,12 @@ export default function Projects() {
       <div
         role="region"
         aria-label={t("filterAriaLabel")}
-        className="mt-8 mb-10 w-full flex justify-center"
+        className="mt-8 mb-10 flex w-full justify-center"
       >
         <div
           role="group"
           aria-label={t("filterAriaLabel")}
-          className="inline-flex flex-wrap items-center justify-center gap-2 rounded-2xl bg-neutral-100/90 p-1.5 backdrop-blur-xs border border-neutral-200/80 dark:bg-neutral-800/90 dark:border-neutral-700/80"
+          className="inline-flex flex-wrap items-center justify-center gap-2 rounded-2xl border border-neutral-200/80 bg-neutral-100/90 p-1.5 backdrop-blur-xs dark:border-neutral-700/80 dark:bg-neutral-800/90"
         >
           {filterOptions.map((option) => {
             const isActive = activeFilter === option.id;
@@ -128,11 +119,11 @@ export default function Projects() {
                 onClick={() => setActiveFilter(option.id)}
                 aria-pressed={isActive}
                 className={cn(
-                  "cursor-pointer inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold transition-all duration-200 outline-none motion-reduce:transition-none",
-                  "focus-visible:ring-2 focus-visible:ring-primary dark:focus-visible:ring-orange focus-visible:ring-offset-2 dark:focus-visible:ring-offset-neutral-900",
+                  "inline-flex cursor-pointer items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold transition-all duration-200 outline-none motion-reduce:transition-none",
+                  "focus-visible:ring-primary dark:focus-visible:ring-orange focus-visible:ring-2 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-neutral-900",
                   isActive
-                    ? "bg-primary text-white shadow-md dark:bg-orange dark:text-neutral-950 font-bold"
-                    : "text-neutral-600 hover:text-neutral-900 hover:bg-neutral-200/70 dark:text-neutral-300 dark:hover:text-white dark:hover:bg-neutral-700/70"
+                    ? "bg-primary dark:bg-orange font-bold text-white shadow-md dark:text-neutral-950"
+                    : "text-neutral-600 hover:bg-neutral-200/70 hover:text-neutral-900 dark:text-neutral-300 dark:hover:bg-neutral-700/70 dark:hover:text-white",
                 )}
               >
                 {isActive && (
@@ -157,7 +148,7 @@ export default function Projects() {
         ) : (
           <motion.div
             layout={shouldReduceMotion ? false : "position"}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full"
+            className="grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
           >
             <AnimatePresence mode="popLayout">
               {filteredProjects.map((project) => (
@@ -177,7 +168,11 @@ export default function Projects() {
                   exit={
                     shouldReduceMotion
                       ? { opacity: 0 }
-                      : { opacity: 0, scale: 0.96, transition: { duration: 0.15 } }
+                      : {
+                          opacity: 0,
+                          scale: 0.96,
+                          transition: { duration: 0.15 },
+                        }
                   }
                   transition={
                     shouldReduceMotion
@@ -190,8 +185,8 @@ export default function Projects() {
                     {/* Decorative gradient overlay */}
                     <div
                       className={cn(
-                        "pointer-events-none absolute inset-x-0 top-0 h-28 bg-gradient-to-b opacity-50 transition-opacity duration-300 group-hover:opacity-80 motion-reduce:transition-none",
-                        project.accentGradient
+                        "pointer-events-none absolute inset-x-0 top-0 h-28 bg-linear-to-b opacity-50 transition-opacity duration-300 group-hover:opacity-80 motion-reduce:transition-none",
+                        project.accentGradient,
                       )}
                       aria-hidden="true"
                     />
@@ -199,11 +194,11 @@ export default function Projects() {
                     {/* Card Top: Category, Title, Description */}
                     <header className="relative flex flex-col gap-3">
                       <div>
-                        <span className="inline-flex items-center rounded-full bg-neutral-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-neutral-600 border border-neutral-200/60 dark:bg-neutral-800 dark:text-neutral-300 dark:border-neutral-700/60">
+                        <span className="inline-flex items-center rounded-full border border-neutral-200/60 bg-neutral-100 px-3 py-1 text-xs font-semibold tracking-wider text-neutral-600 uppercase dark:border-neutral-700/60 dark:bg-neutral-800 dark:text-neutral-300">
                           {t(getCategoryLabelKey(project.category))}
                         </span>
                       </div>
-                      <h3 className="text-xl font-bold text-neutral-900 transition-colors group-hover:text-primary motion-reduce:transition-none dark:text-neutral-100 dark:group-hover:text-orange">
+                      <h3 className="group-hover:text-primary dark:group-hover:text-orange text-xl font-bold text-neutral-900 transition-colors motion-reduce:transition-none dark:text-neutral-100">
                         {t(project.titleKey)}
                       </h3>
                       <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
@@ -212,7 +207,7 @@ export default function Projects() {
                     </header>
 
                     {/* Card Bottom: Technologies & Link */}
-                    <div className="relative mt-6 flex flex-col gap-4 pt-4 border-t border-neutral-100 dark:border-neutral-800">
+                    <div className="relative mt-6 flex flex-col gap-4 border-t border-neutral-100 pt-4 dark:border-neutral-800">
                       <div>
                         <h4 className="sr-only">{t("technologiesLabel")}</h4>
                         <div
@@ -231,7 +226,7 @@ export default function Projects() {
                       </div>
 
                       {project.githubUrl && (
-                        <footer className="pt-2 flex items-center justify-between">
+                        <footer className="flex items-center justify-between pt-2">
                           <a
                             href={project.githubUrl}
                             target="_blank"
@@ -239,7 +234,7 @@ export default function Projects() {
                             aria-label={t("viewSourceAria", {
                               title: t(project.titleKey),
                             })}
-                            className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-orange focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-md motion-reduce:transition-none dark:text-blue-400 dark:hover:text-orange dark:focus-visible:ring-orange dark:focus-visible:ring-offset-neutral-900"
+                            className="text-primary hover:text-orange focus-visible:ring-primary dark:hover:text-orange dark:focus-visible:ring-orange inline-flex items-center gap-2 rounded-md text-sm font-semibold transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none motion-reduce:transition-none dark:text-blue-400 dark:focus-visible:ring-offset-neutral-900"
                           >
                             <GitHubIcon sx={{ fontSize: 20 }} />
                             <span>{t("viewSource")}</span>
