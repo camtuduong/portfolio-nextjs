@@ -9,6 +9,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import About from "../About";
+import Projects from "../Projects";
 import Stack from "../Stack";
 
 export default function HomeView() {
@@ -57,6 +58,9 @@ export default function HomeView() {
 
       {/* My Stack */}
       <Stack />
+
+      {/* Projects */}
+      <Projects />
     </LayoutBackground>
   );
 }
