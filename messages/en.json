@@ -18,5 +18,38 @@
       "db": "DATABASE",
       "tools": "TOOLS"
     }
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "A showcase of web applications, tools, and full-stack projects built with modern technologies.",
+    "filterAriaLabel": "Filter projects by category",
+    "allFilter": "All",
+    "categories": {
+      "frontend": "Frontend",
+      "fullstack": "Full Stack",
+      "tools": "Tools & Utilities"
+    },
+    "items": {
+      "portfolio": {
+        "title": "Personal Portfolio",
+        "description": "Modern developer portfolio built with Next.js, React, and Tailwind CSS, featuring multi-language support, custom theme switching, and interactive animations."
+      },
+      "fastChat": {
+        "title": "FastChat",
+        "description": "Real-time chat platform built with React, Node.js, Express, and MongoDB, featuring authentication, conversations, friendships, file attachments, and Socket.IO messaging."
+      },
+      "learnWebDev": {
+        "title": "Learn Web Dev",
+        "description": "Structured collection of practical web development exercises and solutions covering JavaScript, TypeScript, Node.js, and MongoDB fundamentals."
+      },
+      "motionUiComponents": {
+        "title": "Motion UI Components",
+        "description": "Reusable collection of interactive motion and interface components including TextType, TargetCursor, route transitions, and micro-interactions built with Framer Motion."
+      }
+    },
+    "technologiesLabel": "Technologies used",
+    "viewSource": "View on GitHub",
+    "viewSourceAria": "View {title} source code on GitHub (opens in new tab)",
+    "noProjects": "No projects found for the selected category."
   }
 }

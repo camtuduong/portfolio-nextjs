@@ -18,5 +18,38 @@
       "db": "DATABASE",
       "tools": "TOOLS"
     }
+  },
+  "projects": {
+    "title": "Dự án",
+    "subtitle": "Bộ sưu tập các ứng dụng web, công cụ và dự án full-stack được xây dựng bằng công nghệ hiện đại.",
+    "filterAriaLabel": "Lọc dự án theo danh mục",
+    "allFilter": "Tất cả",
+    "categories": {
+      "frontend": "Frontend",
+      "fullstack": "Full Stack",
+      "tools": "Công cụ & Tiện ích"
+    },
+    "items": {
+      "portfolio": {
+        "title": "Portfolio cá nhân",
+        "description": "Trang portfolio hiện đại được xây dựng với Next.js, React và Tailwind CSS, tích hợp đa ngôn ngữ, chuyển đổi giao diện sáng/tối và hiệu ứng chuyển động tương tác."
+      },
+      "fastChat": {
+        "title": "FastChat",
+        "description": "Nền tảng trò chuyện thời gian thực xây dựng với React, Node.js, Express và MongoDB, hỗ trợ xác thực người dùng, cuộc hội thoại, kết bạn, tệp đính kèm và tin nhắn qua Socket.IO."
+      },
+      "learnWebDev": {
+        "title": "Learn Web Dev",
+        "description": "Tập hợp các bài tập và giải pháp thực hành phát triển web có cấu trúc, bao quát kiến thức nền tảng về JavaScript, TypeScript, Node.js và MongoDB."
+      },
+      "motionUiComponents": {
+        "title": "Motion UI Components",
+        "description": "Bộ sưu tập linh kiện giao diện và hiệu ứng chuyển động tái sử dụng, bao gồm TextType, TargetCursor, chuyển cảnh và tương tác vi mô xây dựng với Framer Motion."
+      }
+    },
+    "technologiesLabel": "Công nghệ sử dụng",
+    "viewSource": "Xem trên GitHub",
+    "viewSourceAria": "Xem mã nguồn {title} trên GitHub (mở trong tab mới)",
+    "noProjects": "Không tìm thấy dự án nào trong danh mục đã chọn."
   }
 }
