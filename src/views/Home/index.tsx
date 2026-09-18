@@ -21,7 +21,7 @@ export default function HomeView() {
       <About />
       {/* CAPABILITIES */}
       <Capabilities />
-      {/* My Stack */}Capabilities
+      {/* My Stack */}
       <Stack />
       {/* Projects */}
       <Projects />
