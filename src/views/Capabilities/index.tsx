@@ -64,7 +64,7 @@ export default function Capabilities() {
     <section
       id="capabilities"
       aria-label={t("title")}
-      className="mt-28 flex w-full flex-col items-center px-4 sm:px-6 lg:px-8"
+      className="mt-20 flex w-full flex-col items-center px-4 sm:px-6 lg:px-8"
     >
       <header className="flex flex-col items-center gap-2 text-center">
         <h2 className="font-playfair text-4xl leading-tight font-bold tracking-tight sm:text-5xl">
