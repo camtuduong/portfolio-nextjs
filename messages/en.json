@@ -80,11 +80,15 @@
     "items": {
       "portfolio": {
         "title": "Personal Portfolio",
-        "description": "Modern developer portfolio built with Next.js, React, and Tailwind CSS, featuring multi-language support, custom theme switching, and interactive animations."
+        "description": "Modern developer portfolio built with Next.js, React, TypeScript, Tailwind CSS, and Framer Motion, featuring multi-language support, custom theme switching, and interactive animations."
       },
       "fastChat": {
         "title": "FastChat",
-        "description": "Real-time chat platform built with React, Node.js, Express, and MongoDB, featuring authentication, conversations, friendships, file attachments, and Socket.IO messaging."
+        "description": "Real-time chat platform built with React, Node.js, Express.js, MongoDB, and Socket.IO, featuring user authentication, conversation management, friendships, file attachments, and instant messaging."
+      },
+      "beautySalon": {
+        "title": "Beauty Salon",
+        "description": "Full-stack beauty salon website featuring service listings and categories, customer feedback, and contact details, built with Next.js, React, TypeScript, Tailwind CSS, NestJS, Prisma, and PostgreSQL."
       },
       "learnWebDev": {
         "title": "Learn Web Dev",
@@ -98,6 +102,8 @@
     "technologiesLabel": "Technologies used",
     "viewSource": "View on GitHub",
     "viewSourceAria": "View {title} source code on GitHub (opens in new tab)",
+    "viewWebsite": "View Website",
+    "viewWebsiteAria": "View {title} website (opens in new tab)",
     "noProjects": "No projects found for the selected category."
   },
   "contact": {

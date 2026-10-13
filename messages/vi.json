@@ -80,11 +80,15 @@
     "items": {
       "portfolio": {
         "title": "Portfolio cá nhân",
-        "description": "Trang portfolio hiện đại được xây dựng với Next.js, React và Tailwind CSS, tích hợp đa ngôn ngữ, chuyển đổi giao diện sáng/tối và hiệu ứng chuyển động tương tác."
+        "description": "Trang portfolio hiện đại được xây dựng với Next.js, React, TypeScript, Tailwind CSS và Framer Motion, tích hợp hỗ trợ đa ngôn ngữ, chuyển đổi giao diện sáng/tối và hiệu ứng chuyển động tương tác."
       },
       "fastChat": {
         "title": "FastChat",
-        "description": "Nền tảng trò chuyện thời gian thực xây dựng với React, Node.js, Express và MongoDB, hỗ trợ xác thực người dùng, cuộc hội thoại, kết bạn, tệp đính kèm và tin nhắn qua Socket.IO."
+        "description": "Nền tảng trò chuyện thời gian thực được xây dựng với React, Node.js, Express.js, MongoDB và Socket.IO, hỗ trợ xác thực người dùng, quản lý cuộc hội thoại, kết bạn, tệp đính kèm và nhắn tin tức thì."
+      },
+      "beautySalon": {
+        "title": "Beauty Salon",
+        "description": "Trang web dịch vụ làm đẹp full-stack giới thiệu danh mục dịch vụ, đánh giá từ khách hàng và thông tin liên hệ, được xây dựng với Next.js, React, TypeScript, Tailwind CSS, NestJS, Prisma và PostgreSQL."
       },
       "learnWebDev": {
         "title": "Learn Web Dev",
@@ -98,6 +102,8 @@
     "technologiesLabel": "Công nghệ sử dụng",
     "viewSource": "Xem trên GitHub",
     "viewSourceAria": "Xem mã nguồn {title} trên GitHub (mở trong tab mới)",
+    "viewWebsite": "Xem trang web",
+    "viewWebsiteAria": "Xem trang web {title} (mở trong tab mới)",
     "noProjects": "Không tìm thấy dự án nào trong danh mục đã chọn."
   },
   "contact": {
