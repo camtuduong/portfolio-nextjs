@@ -53,7 +53,7 @@ export default function Navbar() {
             <li>
               <LinkHover
                 content={t("resume")}
-                href="https://drive.google.com/file/d/1WqSVbIhGevO2PhYIeFm6pQrlJgUv7Kp6/view?usp=sharing"
+                href="https://drive.google.com/file/d/1HA92Zfg52POeBgRjTT4pqxP9zKFm5yMD/view?usp=sharing"
                 icon={<Face2Icon className="mr-1" />}
                 external
                 ariaLabel={t("resumeAria")}

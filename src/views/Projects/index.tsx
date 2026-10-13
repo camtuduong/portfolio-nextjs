@@ -3,6 +3,7 @@
 import Dash from "@/icons/Dash";
 import cn from "@/lib/utils/cn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import LanguageIcon from "@mui/icons-material/Language";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import React, { useState } from "react";
@@ -44,6 +45,24 @@ export const PROJECTS_DATA: readonly ProjectMetadata[] = [
     technologies: ["React", "Node.js", "Express.js", "MongoDB", "Socket.IO"],
     accentGradient: "from-teal-500/25 via-emerald-500/15 to-transparent",
     websiteUrl: "https://chatcungthorr.vercel.app/",
+  },
+  {
+    id: "beauty-salon",
+    category: "fullstack",
+    titleKey: "items.beautySalon.title",
+    descriptionKey: "items.beautySalon.description",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "NestJS",
+      "Prisma",
+      "PostgreSQL",
+    ],
+    githubUrl: "https://github.com/camtuduong/beauty-salon-frontend",
+    websiteUrl: "https://beauty-salon-green-zeta.vercel.app/",
+    accentGradient: "from-rose-500/25 via-pink-500/15 to-transparent",
   },
 ] as const;
 
@@ -238,6 +257,23 @@ export default function Projects() {
                           >
                             <GitHubIcon sx={{ fontSize: 20 }} />
                             <span>{t("viewSource")}</span>
+                          </a>
+                        </footer>
+                      )}
+
+                      {project.websiteUrl && (
+                        <footer className="flex items-center justify-between pt-2">
+                          <a
+                            href={project.websiteUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={t("viewWebsiteAria", {
+                              title: t(project.titleKey),
+                            })}
+                            className="text-primary hover:text-orange focus-visible:ring-primary dark:hover:text-orange dark:focus-visible:ring-orange inline-flex items-center gap-2 rounded-md text-sm font-semibold transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none motion-reduce:transition-none dark:text-blue-400 dark:focus-visible:ring-offset-neutral-900"
+                          >
+                            <LanguageIcon sx={{ fontSize: 20 }} />
+                            <span>{t("viewWebsite")}</span>
                           </a>
                         </footer>
                       )}
